@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() {
   runApp(const MyApp());
@@ -75,20 +76,20 @@ class HomePage extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 10),
-                const Text(
+                Text(
                   "Software Engineer",
-                  style: TextStyle(
+                  style: GoogleFonts.playfair().copyWith(
+                    fontWeight: FontWeight.w900,
                     color: Colors.white,
                     fontSize: 20,
-                    fontWeight: FontWeight.w700,
-                    fontStyle: FontStyle.italic,
-                    fontFamily: "Playfair",
                   ),
                 ),
-                const Text(
+                Text(
                   "Facebook",
-                  style: TextStyle(
+                  style: GoogleFonts.sevillana(
+                    fontWeight: FontWeight.w700,
                     color: Colors.white,
+                    fontSize: 20,
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -176,20 +177,24 @@ class HomePage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 const SizedBox(height: 15),
-                const Row(
+                Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Description",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                      style: GoogleFonts.aBeeZee(
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "Requirement",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         color: Colors.grey,
+                        fontFamily: "Sevillana",
+                        fontFamilyFallback: [
+                          "Playfair",
+                        ],
                       ),
                     ),
                     Text(
